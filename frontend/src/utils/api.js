@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const baseURL = 'https://emp-backend-8jrr.onrender.com/api'; // Update this with your backend URL
+const backendUrl = import.meta.env.BACKEND_URL;
+const baseURL = `${backendUrl}/api` || 'http://localhost:3000/api';
 
 const api = axios.create({
     baseURL,
